@@ -1,0 +1,4 @@
+git status
+git add . / git add "FileName"
+git commit-m "My First Program Upload"
+git push
