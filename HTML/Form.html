@@ -7,8 +7,11 @@
 </head>
 <body>
     <h1 align="center">Form Lessons</h1>
-
-    <form action="register.html" method="get">
+    <div>
+        <label for="Image">Image</label>
+        <input type="file" name="Image" id="Image">
+    </div>
+    <form action="register.html" method="get" enctype="multipart/form-data">
         <div>
             <label for="name">Name <label>   <br>
             <input type="text" id="name" placeholder="Enter your name" name="name"> 
@@ -51,7 +54,31 @@
             <input type="radio"  id="gender" name="gender">
             <label for="Female">Female</label>
         </div>
-
+        <br>
+        <label for="">Hobbies</label>
+        <div>
+            <input type="checkbox" name="hobbies" id="Reading" value="Reading"> <label for="Reading">Reading</label>
+            <input type="checkbox" name="hobbies" id="Travelling" value="Travelling"> <label for="Travelling">Travelling</label>
+            <input type="checkbox" name="hobbies" id="Gamming" value="Gamming"> <label for="Gamming">Gamming</label>
+            <input type="checkbox" name="hobbies" id="Football" value="Football"> <label for="Reading">Football</label>
+        </div>
+        <br>
+        <div>
+            <label for="eduction">Eduction</label> <br>
+            <select name="eduction" id="Eduction" >
+                <option value="First Year">Undergraduated</option>
+                <option value="First Year">FirstYear</option>
+                <option value="First Year">SecondYear</option>
+                <option value="First Year">ThirdYear</option>
+                <option value="First Year">FourthYear</option>
+                <option value="First Year">Graduated</option>
+            </select>
+            </div>
+            <br>
+            <div>
+                <label for="Address">Address</label> <br>
+                <textarea name="Address" id="Address"></textarea>
+            </div>
         <button type="submit">Register</button>
         
     </form>
