@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* NAV */
+
+.nav-top{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    width: 100%;
+}
+
+.nav_logo{
+    width: 150px;
+    height: auto;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+
+.search{
+    display: flex;
+    gap: 10px;
+}
+
+.search input{
+    width: 300px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search button{
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.phone{
+    font-size: 14px;
+    white-space: nowrap;
+}
+.icons{
+    margin-right: 100px;
+}
+.icons i{
+    font-size: 18px;
+    margin-left: 12px;
+    cursor: pointer;
+    
+}
+
+.navbar{
+    display: inline-block;
+    margin-left: 100px;
+}
+
+.navbar li{
+    display: inline-block;
+    margin: 0 25px;
+}
+
+.navbar li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+/* Nav end */
+
+/* <!-- Start bunner --> */
+.banner{
+    width: 100%;
+}
