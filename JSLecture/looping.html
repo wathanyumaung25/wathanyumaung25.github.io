@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+</head>
+<body>
+    <h1>Looping Lesson</h1>
+    <script>
+        // for looping
+        // document.write("<h3> Hello World </h3>")
+
+        // for(initialize ; comparison ; update ){
+            // code
+        // }
+
+        for(let num=1; num<=5;num++){
+            document.write(`<h3> Hello World ${num} </h3>`);
+        }
+        let laptops = ["Dell","Lenovo","Ausus","Acer","Macbook","Fujitsu"];
+        // document.write(`I want to this laptop${laptops}`);
+
+        for(let i = 0; i< laptops.length;i++){
+            document.write(`I want to this ${laptops[i]} <br>`);
+        }
+        //*
+        //**
+        //***
+
+        for(let h=0;h<10;h++){
+            for(let i=0;  i<=h; i++){
+                document.write("*");
+            }
+            document.write(`<br>`);
+        }
+        //Homework
+        //*****
+        //****
+        //***
+        //**
+        //*
+
+        //While Looping
+        let num = 300;
+        while(num<100)
+        {
+            document.write(`Your number is ${num} <br>`);
+
+            // Update
+            num-=5;
+        }
+        // do while
+        // do{
+                //code
+
+                //update
+        // }while(Condition);
+
+        let no =10;
+        do{
+            document.write(`Your number is ${no} <br>`);
+            //update
+            no-=2;
+        }while(no>5);
+
+        
+    </script>
+</body>
+</html>

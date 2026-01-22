@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <h1>String Lessons</h1>
+    <script>
+        let firstName = "Developer";
+        let lastName = "Wathan Yu Maung";
+        console.log(firstName.length);
+        
+        console.log(firstName);
+        console.log(lastName);
+        // let fullName = firstName+ ' ' + lastName;
+        console.log();
+        
+        let fullName = firstName.concat(' ',lastName);
+        console.log(fullName);
+            
+        document.write('<h1>' + firstName + '</h1><h2>'+ lastName + '</h2>')
+        document.write(`<h1> ${firstName} </h1> <h2> ${lastName} </h2>`)
+        document.write(`<h3> My name is ${fullName} . I am 29 years . My nick name is ${lastName} </h3>`)
+
+        console.log(firstName.toUpperCase());
+        console.log(firstName.toLowerCase());
+        console.log(firstName.substring(2,4));
+
+        let job = '            web               developer .        ';
+        console.log(job.trim());
+
+        let ser = 'JavaScript is funny';
+        console.log(ser.search('is'));
+
+        let rep = 'I want to Visit Yangon';
+        console.log(rep.replace('Yangon, Mandalay'));
+        
+        console.log('I\'m Wathan Yu Maung');
+        console.log("I'm Wathan Yu Maung");
+        console.log("I'm Wathan Yu Maung , 5'9\"");
+        console.log(`I\`m Wathan Yu Maung , 5'9"`);
+        
+        let num = '3-500-000';
+        console.log(num.replace(/\-/g,''));
+        
+    </script>
+</body>
+</html>
