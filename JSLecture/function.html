@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>Function Lesson</h1>
+    <script>
+        // naming function
+        function hello(){
+            //code
+            document.write(`Hello World`);
+        }
+        hello();
+
+        //argument function
+        function sum(num1,num2){ // parameter
+            let result = num1 + num2;
+            document.write(`Result is ${result} <br>`)
+        }
+        sum(3,6);
+        sum(12,22);
+
+        //default function
+        function multi(num1=100,num2=40){
+            let result = num1+num2;
+            document.write(`Result is ${result} <br>`);
+        }
+        multi(22,22);
+        // return function
+
+        function result(num1,num2){
+            let result =num1-num2;
+            return result;
+        }
+        let subResult = result(1231231,12312315);
+        document.write(subResult);
+
+        // object
+
+        let hotel = {
+            name: "Wathan Yu Maung",
+            rooms: 50,
+            booked: 25,
+            gym:true,
+            pool:true,
+            roomType:["Twin","Double","Suite","Family","Luxury"],
+            checkAvailablity: function(){
+                let result = this.rooms-this.booked;
+                return result;
+            }
+            }
+            console.log(hotel);
+            console.log(hotel.name);
+            console.log(hotel.rooms);
+            console.log(hotel.gym);
+            console.log(hotel.roomType[3]);
+            
+            let roomfree = hotel.checkAvailablity();
+            console.log(roomfree);
+            hotel.name = "Cloud"
+            console.log(hotel);
+            
+    </script>
+
+</body>
+</html>
