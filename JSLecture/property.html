@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property and method</title>
+</head>
+<body>
+    <h1>Property and Method</h1>
+    <h2 id="myH2"></h2>
+    <p id="myP">This is set Attribute</p>
+    <p id="change" style="color: red;">Get & Set and Remove Color</p>
+    <button onclick="createText()">Create Text Node</button>
+    <button onclick="createElementNode()">Create Element Node</button>
+    <button onclick="createAtt()">Create Attribute</button>
+    <button onclick="changeColor()">Change Color</button>
+
+    <script>
+        function createText(){
+            // alert("hello");
+            let textNode = document.createTextNode('This is a text Node');
+            let element = document.getElementById("myH2");
+            element.appendChild(textNode)
+            // console.log(textNode);            
+         }
+         function createElementNode(){
+            let elementNode = document.createElesment('div');
+            elementNode.innerText = 'This is an <i> element </i> node';
+            console.log(elementNode);
+            document.body.appendChild(elementNode);
+         }
+        function createAtt() {
+            let myP = document.querySelector('#myP');
+            myP.setAttribute('style','color:red;');
+        }
+        function changeColor() {
+            let changeP = document.getElementById('change');
+            let currentStyle = changeP.getAttribute('Style');
+            console.log(currentStyle);
+            if(currentStyle == 'color:red;')
+        {
+            changeP.setAttribute('style','color:green;');
+        } else
+        {
+            changeP.setAttribute('style','color:red');
+        }
+        //  changeP.removeAttribute('style');
+        }
+    </script>
+</body>
+</html>

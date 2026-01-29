@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam</title>
+</head>
+<body>
+    <h1>Student Result</h1>
+
+    <form action="" name="myForm">
+    <label for="name">Name</label> <br>
+    <input type="text" name="name" id="name"> <br>
+
+    <label for="myanmar">Myanmar</label><br>
+    <input type="text" name="myanmar" id="myanmar"> <br>
+
+    <label for="english">English</label><br>
+    <input type="text" name="english" id="english"> <br>
+
+    <label for="math">Math</label><br>
+    <input type="text" name="math" id="math"> <br><br><br>
+    
+    <button type="submit" onclick="result()">Submit</button>
+
+    </form>
+    <script>
+        function result(){
+           // let name = document.getElementById('name').value;
+            let name = document.myForm.name.value;
+            let myanmar = document.myForm.myanmar.value;
+            let english = document.myForm.english.value;
+            let math = document.myForm.math.value;
+
+            console.log(name);
+            console.log(myanmar);
+            console.log(english);
+            console.log(math);
+            
+            if(myanmar >= 40 && english >= 40 && math >=40){
+                document.write(`<h2>Congratulation ${name} You are Passed!</h2>`);
+                if(myanmar>=75)
+                {
+                document.write(`<h2>Congratulation ${name} You get distinction in Myanmar ${myanmar} You are Passed!</h2>`)
+                }
+                if(english>=75)
+                {
+                document.write(`<h2>Congratulation ${name} You get distinction in english ${english} You are Passed!</h2>`)
+                }
+                if(math>=75)
+                {
+                document.write(`<h2>Congratulation ${name} You get distinction in math ${math} You are Passed!</h2>`)
+                }
+                
+            }
+            else {
+                document.write(`<h2> Sorry ${name} You are Failed!</h2>`);
+            }
+        }
+
+    </script>
+</body>
+</html>
