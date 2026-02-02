@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Data Function</h1>
+    <p id="time"></p>
+
+    <script>
+        let todayDate = new Date();
+        console.log(todayDate);
+        let fullYear = todayDate.getFullYear();
+        console.log(fullYear);
+        
+        let fullMonth = todayDate.getMonth()+1;
+        console.log(fullMonth);
+        
+        let date = todayDate.getDate();
+        console.log(date);
+        
+        let days = ['Sun','Mon','Tues','Wed','Thurs','Fri','Sat'];
+        let day = todayDate.getDay();
+        console.log(days[day]);
+        
+        let hours = todayDate.getHours();
+        console.log(hours);
+        
+        let minutes = todayDate.getMinutes();
+        console.log(minutes);
+        
+        let seconds = todayDate.getSeconds();
+        console.log(seconds);
+        
+        let timeFormat = todayDate.toLocaleTimeString();
+        console.log(timeFormat);
+        
+        function timeInterval()
+        {
+            let now = new Date();
+            let second = now.getSeconds();
+            document.getElementById('time').innerHTML = second;
+        }
+        
+        setInterval(timeInterval,1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Event Lesson</h1>
+    <img src="images/1.jpg" alt="" id="myImage" width="300" height="300" onmouseenter="big()" onclick="normal()"> <br>
+
+    <input type="text" name="" id="myInput" onkeydown="result()">
+    <p id="result"></p>
+
+    <script>
+        // onmouseover event
+        // onmouseenter event
+
+        function big(){
+            // alert("You are mouse over image");
+            document.getElementById('myImage').style.width="500px";
+            document.getElementById('myImage').style.height="500px";
+        }
+
+        // onmouseleave
+        // onmouseout
+        // onmouseexit
+        // onmousedown
+        // onclick
+        
+        function normal(){
+            document.getElementById('myImage').style.width="300px";
+            document.getElementById('myImage').style.height="300px";
+        }
+
+        // onkeyup event
+        // onchange
+
+        function result(){
+            let inputValue = document.getElementById('myInput').value;
+             document.getElementById('result').innerText = inputValue;
+        }
+    </script>
+</body>
+</html>
