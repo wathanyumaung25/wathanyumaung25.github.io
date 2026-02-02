@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voucher Homework</title>
+    <style>
+       <style>
+    body{
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        text-align: center;
+        padding: 30px;
+    }
+
+    h1{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    form{
+        background: #fff;
+        width: 320px;
+        margin: 0 auto 40px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    label{
+        font-weight: bold;
+    }
+
+    input{
+        width: 90%;
+        padding: 8px;
+        margin: 8px 0 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button{
+        padding: 8px 20px;
+        background: #333;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover{
+        background: #555;
+    }
+
+    /* Voucher Slip */
+    #table{
+        background: #fff;
+        margin: 0 auto;
+        width: 70%;
+        border-collapse: collapse;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    #table th{
+        background: #222;
+        color: #fff;
+        padding: 10px;
+    }
+
+    #table td{
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px dashed #999;
+    }
+
+    #table tr:last-child td{
+        border-bottom: none;
+    }
+</style>
+
+    </style>
+</head>
+<body>
+
+<h1>Yangon Tea Shop</h1>
+
+<form onsubmit="registerFood(); return false;">
+    <label for="foodname">Name</label><br>
+    <input type="text" id="foodname"><br>
+
+    <label for="price">Price</label><br>
+    <input type="number" id="price"><br>
+
+    <label for="qty">Qty</label><br>
+    <input type="number" id="qty"><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<h1>Yangon Tea Shop Slip</h1>
+
+<table id="table" border="1" cellpadding="10" cellspacing="0">
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Food Name</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody id="tbody">
+    </tbody>
+</table>
+
+<script>
+var forms = [];
+
+function registerFood() {
+    let foodname = document.getElementById("foodname").value;
+    let price = document.getElementById("price").value;
+    let qty = document.getElementById("qty").value;
+
+    if (foodname === "" || price === "" || qty === "") {
+        alert("Please fill all fields");
+        return;
+    }
+
+    let form = {
+        foodname: foodname,
+        price: price,
+        qty: qty,
+        total: price * qty
+    };
+
+    forms.push(form);
+
+    let table = "";
+
+    for (let i = 0; i < forms.length; i++) {
+        table += `
+            <tr>
+                <td>${i + 1}</td>
+                <td>${forms[i].foodname}</td>
+                <td>${forms[i].price}</td>
+                <td>${forms[i].qty}</td>
+                <td>${forms[i].total}</td>
+            </tr>
+        `;
+    }
+
+    document.getElementById("tbody").innerHTML = table;
+}
+</script>
+
+</body>
+</html>
