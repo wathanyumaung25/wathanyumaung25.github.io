@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation </title>
+</head>
+<body>
+    
+    <h1>Validation</h1>
+<form action="dashboard.html" onsubmit="return validationForm()">
+    <label for="email">Email:</label> 
+    <input type="email" id="email" name="email"> <span id="emailError"></span> <br> <br>
+    <label for="passowrd">Passowrd:</label> 
+    <input type="passowrd" id="passowrd" name="passowrd" minlength="6"> <br> <br>
+    <button type="submit">Login</button>
+
+</form>
+
+<script>
+
+    function validationForm(){
+        let email = document.getElementById('email').value;
+        let passowrd = document.getElementById('password').value;
+        console.log(email,passowrd);
+        if(email == ""){
+            document.getElementById('email').style.border ="2px solid red";
+            document.getElementById('emailError').innerText="Email is required";
+        }
+        else{
+            document.getElementById('email').style.border ="1px solid green";
+            document.getElementById('emailError').innerText="";
+        }
+
+        if(passowrd == ""){
+            document.getElementById('password').style.border ="2px solid red";
+            return false;
+        }
+
+        return true;
+    }
+
+</script>
+</body>
+</html>
