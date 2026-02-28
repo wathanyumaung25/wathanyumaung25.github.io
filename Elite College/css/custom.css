@@ -1,0 +1,152 @@
+
+:root {
+    --navy: #0b1f3a;
+    --gold: #f5b301;
+    --white: #ffffff;
+    --light: #f8f9fa;
+    --text-muted: #6c757d;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #212529;
+    line-height: 1.7;
+}
+
+.bg-navy { background-color: var(--navy) !important; }
+.navy-text { color: var(--navy); }
+.ls-1 { letter-spacing: 1px; }
+.fw-extrabold { font-weight: 800; }
+.py-6 { padding: 5rem 0; }
+
+/* Nav */
+.navbar-brand .logo-img {
+    height: 50px;
+    width: 50px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+}
+.nav-link { font-size: 0.85rem; letter-spacing: 0.5px; transition: color 0.3s; }
+.nav-link:hover { color: var(--gold) !important; }
+
+/* Banner */
+.hero-solid {
+    background-color: var(--navy);
+    background-image: linear-gradient(rgba(11,31,58,0.7), rgba(11,31,58,0.7)), url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1500');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+    color: var(--white);
+}
+
+/* Cards */
+.faculty-card {
+    background: var(--white);
+    border: 1px solid #eee;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.faculty-card:hover { transform: translateY(-5px); }
+.faculty-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+.title-line {
+    width: 60px;
+    height: 5px;
+    background: var(--gold);
+    margin-top: 15px;
+}
+
+/* UTILITY CLASSES */
+.btn-warning { background-color: var(--gold); border: none; font-weight: 700; color: var(--navy); border-radius: 0; }
+.btn-navy { background-color: var(--navy); border: none; border-radius: 0; }
+.btn-outline-light { border-radius: 0; }
+
+/* FOOTER */
+footer a:hover { color: var(--gold) !important; text-decoration: underline !important; }
+
+@media (max-width: 992px) {
+    .hero-solid { text-align: center; padding: 80px 0; }
+    .hero-solid .d-flex { justify-content: center; }
+}
+
+/* --- Programs PAGE--- */
+
+.btn-outline-navy {
+    color: var(--navy);
+    border: 2px solid var(--navy);
+    border-radius: 0;
+    transition: 0.3s;
+}
+
+.btn-outline-navy:hover {
+    background-color: var(--navy);
+    color: white;
+}
+
+.table thead {
+    border-bottom: 4px solid var(--gold);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(245, 179, 1, 0.05); /* Very light gold tint */
+}
+
+.badge {
+    font-size: 0.7rem;
+    padding: 6px 12px;
+    letter-spacing: 0.5px;
+}
+.bg-navy .text-warning, 
+.bg-navy a {
+    color: #f5b301 !important; 
+    text-decoration: none;
+}
+
+/* --- ADMISSION PAGE --- */
+.form-control, .form-select {
+    border: 1px solid #dee2e6;
+    padding: 12px 15px;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 0.25rem rgba(245, 179, 1, 0.1);
+}
+
+.form-label {
+    color: var(--navy);
+    margin-bottom: 5px;
+}
+
+/* Carousel */
+.btn-navy {
+    background-color: #002147 !important;
+    color: white !important;
+    border-radius: 0; 
+    transition: 0.3s;
+}
+
+.btn-navy:hover {
+    background-color: #ffc107 !important;
+    color: #002147 !important;         
+    border-color: #ffc107 !important;
+}
+
+.hero-solid {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background-color: #002147;
+}
+
+.carousel-fade .carousel-item {
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-item {
+    background-size: cover;
+    background-position: center;
+}
